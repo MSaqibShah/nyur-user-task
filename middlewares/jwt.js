@@ -2,6 +2,7 @@ const jwt = require("jsonwebtoken");
 const { UserModel } = require("../models/UserModel");
 const makeValidation = require("../utils/validation");
 SECRET_KEY = "HERE-is-my-totally-secret-key";
+const bcrypt = require("bcrypt");
 
 const userErrors = {
   notfound: {
@@ -54,18 +55,25 @@ const encode = (req, res, next) => {
     } else {
       // User found
       // check password
-      if (user["password"] !== password) {
-        return res.status(500).json(userErrors["invalidPass"]);
-      } else {
-        const payload = {
-          userId: user._id,
-          userType: user.type,
-        };
-        const authToken = jwt.sign(payload, SECRET_KEY);
-        // console.log("Auth", authToken);
-        req.authToken = authToken;
-        next();
-      }
+      bcrypt.compare(password, user["password"], function (err, result) {
+        if (err) {
+          console.log(err);
+          return res.status(500).json(userErrors["default"]);
+        }
+
+        if (result == false) {
+          return res.status(500).json(userErrors["invalidPass"]);
+        } else {
+          const payload = {
+            userId: user._id,
+            userType: user.type,
+          };
+          const authToken = jwt.sign(payload, SECRET_KEY);
+          // console.log("Auth", authToken);
+          req.authToken = authToken;
+          next();
+        }
+      });
     }
   });
 };

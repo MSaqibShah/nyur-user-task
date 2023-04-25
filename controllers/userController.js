@@ -7,6 +7,8 @@ const {
 } = require("../models/UserModel");
 const { copyFromDict } = require("../utils/maintainance");
 // const { handleUserError } = require("../errors/user");
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
 
 module.exports = {
   onGetAllUsers: (req, res) => {
@@ -71,37 +73,44 @@ module.exports = {
 
     const { firstName, lastName, type, gender, age, email, password } =
       req.body;
-    const user = UserModel.createUser(
-      firstName,
-      lastName,
-      type,
-      gender,
-      age,
-      email,
-      password
-    )
-      .then((user) => {
-        const data = copyFromDict(user, [
-          "firstname",
-          "lastName",
-          "gender",
-          "age",
-          "type",
-          "email",
-          "_id",
-          "createdAt",
-          "updatedAt",
-        ]);
-        return res.status(200).json({ success: true, data });
-      })
-      .catch((error) => {
-        console.log(error);
-        if (error.code == 11000) {
-          return res.status(500).json(userErrors["duplicate"]);
-        } else {
-          return res.status(500).json(userErrors["default"]);
-        }
-      });
+
+    bcrypt.hash(password, saltRounds, function (err, hash) {
+      if (err) {
+        console.log(err);
+        return res.status(500).json(userErrors["default"]);
+      }
+      const user = UserModel.createUser(
+        firstName,
+        lastName,
+        type,
+        gender,
+        age,
+        email,
+        hash
+      )
+        .then((user) => {
+          const data = copyFromDict(user, [
+            "firstname",
+            "lastName",
+            "gender",
+            "age",
+            "type",
+            "email",
+            "_id",
+            "createdAt",
+            "updatedAt",
+          ]);
+          return res.status(200).json({ success: true, data });
+        })
+        .catch((error) => {
+          console.log(error);
+          if (error.code == 11000) {
+            return res.status(500).json(userErrors["duplicate"]);
+          } else {
+            return res.status(500).json(userErrors["default"]);
+          }
+        });
+    });
   },
   onDeleteUserById: (req, res) => {
     const user = UserModel.deleteByUserById(req.params.id);
