@@ -11,7 +11,8 @@ I have added the postman documentation to help you test the api. I have used the
 
 [Postman Docs](Nyur-user.postman_collection.json)
 
-Additonal Details 
+# Additonal Details 
+
 Node Version: v16.15.0
 Npm version: 8.5.5
 
