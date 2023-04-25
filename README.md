@@ -10,3 +10,9 @@ Here is the complete code for the following tasks as asked over the email
 I have added the postman documentation to help you test the api. I have used the express framework to implement the api with mongodb as the database.  
 
 [Postman Docs](Nyur-user.postman_collection.json)
+
+Additonal Details 
+Node Version: v16.15.0
+Npm version: 8.5.5
+
+Database config details: [config/app.py](config/app.py)
