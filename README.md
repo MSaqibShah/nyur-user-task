@@ -15,4 +15,4 @@ Additonal Details
 Node Version: v16.15.0
 Npm version: 8.5.5
 
-Database config details: [config/app.py](./config/app.py)
+Database config details: [config/app.js](./config/app.js)
