@@ -1,0 +1,857 @@
+{
+	"info": {
+		"_postman_id": "b61bb38a-bbf2-4542-a106-53dcf4ca87ef",
+		"name": "Nyur-user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23649925"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "[GET] Get user by ID - profile details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/8f707ee5bcbb4cfc95c2824134ca87fa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"8f707ee5bcbb4cfc95c2824134ca87fa"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[GET] Get user by ID - profile details [SUCCESS]",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/users/19091305397b4b42a40a44ba1a9fbcd5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"19091305397b4b42a40a44ba1a9fbcd5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "255"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ff-Xy8Me4qKqYqtm96PGFCkJwgZehA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Apr 2023 14:14:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"19091305397b4b42a40a44ba1a9fbcd5\",\n        \"firstName\": \"John\",\n        \"lastName\": \"Doe\",\n        \"gender\": \"male\",\n        \"age\": \"21\",\n        \"type\": \"consumer\",\n        \"email\": \"abc@125.com\",\n        \"createdAt\": \"2023-04-25T14:13:24.534Z\",\n        \"updatedAt\": \"2023-04-25T14:13:24.534Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "[GET] Get user by ID - profile details [FAILED]",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/users/19091305397b4b42a40a44ba1a9fbcd5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"19091305397b4b42a40a44ba1a9fbcd5"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"38-Dlg2iWNdlqA5y6LaaFrvW1BJJDE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Apr 2023 14:15:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"code\": 4000,\n    \"message\": \"user not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[Delete] Delete user by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/19091305397b4b42a40a44ba1a9fbcd5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"19091305397b4b42a40a44ba1a9fbcd5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[Delete] Delete user by ID [SUCCESS]",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/users/19091305397b4b42a40a44ba1a9fbcd5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"19091305397b4b42a40a44ba1a9fbcd5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "104"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"68-RL5Bc2HwKf/wo6e5KqGIv2hb/U4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Apr 2023 14:15:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Deleted a count of 1 user.\",\n    \"data\": {\n        \"id\": \"19091305397b4b42a40a44ba1a9fbcd5\"\n    }\n}"
+						},
+						{
+							"name": "[Delete] Delete user by ID [FAILED]",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/users/19091305397b4b42a40a44ba1a9fbcd5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"19091305397b4b42a40a44ba1a9fbcd5"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "60"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3c-v4v4NE46gJThged/F4mKnxUw7Fo\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Apr 2023 14:16:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"code\": 4999,\n    \"message\": \"Unrecognized error\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[GET] Get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[GET] Get all users [SUCCESS]",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "257"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"101-0hAfRMZR6Z/RoNjrUgFAF5XwhFI\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Apr 2023 14:13:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"19091305397b4b42a40a44ba1a9fbcd5\",\n            \"firstName\": \"John\",\n            \"lastName\": \"Doe\",\n            \"gender\": \"male\",\n            \"age\": \"21\",\n            \"type\": \"consumer\",\n            \"email\": \"abc@125.com\",\n            \"createdAt\": \"2023-04-25T14:13:24.534Z\",\n            \"updatedAt\": \"2023-04-25T14:13:24.534Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxOTA5MTMwNTM5N2I0YjQyYTQwYTQ0YmExYTlmYmNkNSIsInVzZXJUeXBlIjoiY29uc3VtZXIiLCJpYXQiOjE2ODI0MzIwMTl9.R7orSYqW0dWXRqg0lbmkF7C4vlBrpYN8NANb0wm0NSg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Public",
+			"item": [
+				{
+					"name": "[POST] Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstName",
+									"value": "John",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Doe",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "consumer",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "21",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "abc@125.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "qwerty123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[POST] Register [SUCCESS]",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "firstName",
+											"value": "John",
+											"type": "text"
+										},
+										{
+											"key": "lastName",
+											"value": "Doe",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "consumer",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "male",
+											"type": "text"
+										},
+										{
+											"key": "age",
+											"value": "21",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "abc@125.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "qwerty123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "228"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e4-CTqmJGVJ2rtrim51qwxFERwoTmo\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Apr 2023 14:13:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"lastName\": \"Doe\",\n        \"gender\": \"male\",\n        \"age\": \"21\",\n        \"type\": \"consumer\",\n        \"email\": \"abc@125.com\",\n        \"_id\": \"19091305397b4b42a40a44ba1a9fbcd5\",\n        \"createdAt\": \"2023-04-25T14:13:24.534Z\",\n        \"updatedAt\": \"2023-04-25T14:13:24.534Z\"\n    }\n}"
+						},
+						{
+							"name": "[POST] Register [FAILED]",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "firstName",
+											"value": "John",
+											"type": "text"
+										},
+										{
+											"key": "lastName",
+											"value": "Doe",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "consumer",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "male",
+											"type": "text"
+										},
+										{
+											"key": "age",
+											"value": "21",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "abc@125.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "qwerty123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"register"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3d-Fvoe5oMyKlb4yVfQ9D1BS5R/C1c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Apr 2023 14:23:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"code\": 4001,\n    \"message\": \"user already exists\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[POST] Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "abc@125.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "qwerty123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[POST] Login [SUCCESS]",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "abc@125.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "qwerty123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "228"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e4-FUmFYK4d55h4IdEpKsX0GAMEzQA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Apr 2023 14:13:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"authorization\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxOTA5MTMwNTM5N2I0YjQyYTQwYTQ0YmExYTlmYmNkNSIsInVzZXJUeXBlIjoiY29uc3VtZXIiLCJpYXQiOjE2ODI0MzIwMTl9.R7orSYqW0dWXRqg0lbmkF7C4vlBrpYN8NANb0wm0NSg\"\n}"
+						},
+						{
+							"name": "[POST] Login [FAILED]",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "abc@125.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "qwerty12",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "66"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"42-Jft0PBlzl6MpCOcbgE8AZVELPnU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Apr 2023 14:26:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"code\": 4002,\n    \"message\": \"user password is invalid\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
